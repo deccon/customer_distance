@@ -20,7 +20,7 @@ public class DistanceCalculatorTest {
 		double latitude = 53.3381985;
 		double longitude = -6.2592576;
 		
-		officeLocation = new Location();
+		officeLocation = new Location(); 
 		
 		officeLocation.setLatitude(latitude);
 		officeLocation.setLongitude(longitude);
