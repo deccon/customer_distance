@@ -17,7 +17,14 @@ public class DistanceCalculatorTest {
 	@Before
 	public void setUp() throws Exception {
 		distanceCalculator = new DistanceCalculator();
-		officeLocation = new Location(53.3381985, -6.2592576);
+		double latitude = 53.3381985;
+		double longitude = -6.2592576;
+		
+		officeLocation = new Location();
+		
+		officeLocation.setLatitude(latitude);
+		officeLocation.setLongitude(longitude);
+		
 		customer = new Customer("John Smith", 123, 52.986375, -6.043701);
 	}
 
@@ -25,7 +32,6 @@ public class DistanceCalculatorTest {
 	public void testDistanceToCustomer() {
 		
 		double result = distanceCalculator.calculateDistance(officeLocation, customer);
-		
 		assertTrue("Distance returned should be greater than zero", result > 0);
 	}
 

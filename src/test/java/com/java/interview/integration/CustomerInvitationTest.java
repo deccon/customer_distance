@@ -29,7 +29,10 @@ public class CustomerInvitationTest {
 	public void setUp() throws Exception {
 		distanceCalculator = new DistanceCalculator();
 		customerFileHelper = new CustomerFileHelper();
-		officeLocation = new Location(53.3381985, -6.2592576);
+		officeLocation = new Location();
+		
+		officeLocation.setLatitude(53.3381985);
+		officeLocation.setLongitude(-6.2592576);
 	}
 
 	@Test
